@@ -20,7 +20,7 @@ https://re-3v0lv3d.github.io/Husband2x/
 
 * **HTML:** Para la estructura de la página web.
 * **JavaScript:** Para la lógica de la aplicación, incluyendo el manejo de la subida de imágenes, el escalado y la descarga.
-* **Librería Pica:** Para el redimensionamiento de imágenes de alta calidad. Esta librería permite que las imágenes escaladas mantengan una buena apariencia, evitando la pixelación excesiva.
+* **Pica:** Para el redimensionamiento de imágenes de alta calidad. Esta librería permite que las imágenes escaladas mantengan una buena apariencia, evitando la pixelación excesiva.
     * Pica es una librería de JavaScript que funciona en el navegador, optimizada para redimensionar imágenes de forma rápida y con alta calidad.
 * **Canvas:** Elemento HTML5 utilizado para mostrar y manipular las imágenes directamente en el navegador.
 
