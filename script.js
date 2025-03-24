@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scaledCanvas.height = newHeight;
 
         const pica = window.pica();
+        const ctx = scaledCanvas.getContext('2d', { willReadFrequently: true }); // Mejora el rendimiento
 
         pica.resize(originalCanvas, scaledCanvas, {
             quality: 3,
@@ -54,10 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
             unsharpThreshold: 1,
         })
         .then(() => {
-            const scaledImageDataUrl = scaledCanvas.toDataURL('image/png');
-            downloadLink.href = scaledImageDataUrl;
-            downloadLink.download = 'scaled-image.png';
-            console.log('URL de datos (pica):', scaledImageDataUrl);
+            if (scaledCanvas.width > 0 && scaledCanvas.height > 0) {
+                const scaledImageDataUrl = scaledCanvas.toDataURL('image/png');
+                if (scaledImageDataUrl && scaledImageDataUrl !== 'data:,') {
+                    downloadLink.href = scaledImageDataUrl;
+                    downloadLink.download = 'scaled-image.png';
+                    console.log('URL de datos (pica):', scaledImageDataUrl);
+                } else {
+                    console.error('Error: URL de datos vacía.');
+                }
+            } else {
+                console.error('Error: Canvas escalado vacío.');
+            }
         })
         .catch(err => {
             console.error("Error al escalar la imagen:", err);
