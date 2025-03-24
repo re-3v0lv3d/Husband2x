@@ -27,7 +27,12 @@ Husband2x es una herramienta web sencilla para reescalar imágenes y ganar calid
 
 ## Para instalar
 
-1.  Descarga los archivos de aquí: [https://github.com/re-3v0lv3d/Husband2x](https://github.com/re-3v0lv3d/Husband2x)
+1.  Clona el repositorio usando git clone:
+
+    ```
+    git clone [https://github.com/re-3v0lv3d/Husband2x.git](https://github.com/re-3v0lv3d/Husband2x.git)
+    ```
+
 2.  Abre el archivo `index.html` en tu navegador.
 
 ## Ayuda
