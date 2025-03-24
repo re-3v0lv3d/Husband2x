@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reescalador de Imágenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Husband2x</h1>
+
+        <div class="input-container">
+            <input type="file" id="imageInput" accept="image/*">
+            <label for="imageInput">Seleccionar imagen</label>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="originalCanvas"></canvas>
+            <canvas id="scaledCanvas"></canvas>
+        </div>
+
+        <div class="controls-container">
+            <select id="scaleFactor">
+                <option value="2">2x</option>
+                <option value="4">4x</option>
+            </select>
+            <button id="scaleButton">Reescalar</button>
+        </div>
+
+        <a id="downloadLink" class="download-button" download="scaled-image.png">Descargar imagen reescalada</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pica@6.0.0/dist/pica.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
