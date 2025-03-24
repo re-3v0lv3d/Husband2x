@@ -5,6 +5,10 @@
 
 Husband2x es una herramienta web sencilla para reescalar imágenes y ganar calidad.
 
+
+https://re-3v0lv3d.github.io/Husband2x/
+
+
 ## Cómo usar
 
 1.  Sube una imagen.
